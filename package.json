@@ -1,0 +1,26 @@
+{
+  "name": "transpile-it",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "http-server",
+    "start": "npm run watch:6to5",
+    "bundle:6to5": "browserify -t 6to5-browserify source.js > built.js",
+    "watch:6to5": "watchify -t 6to5-browserify source.js -o built.js",
+    "bundle:traceur": "browserify -t es6ify source.js > built.js",
+    "watch:traceur": "watchify -t es6ify source.js -o built.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "6to5": "^1.9.10",
+    "6to5-browserify": "0.0.11",
+    "browserify": "^6.1.0",
+    "es6ify": "^1.5.1",
+    "http-server": "^0.7.2",
+    "traceur": "0.0.72",
+    "watchify": "^2.0.0"
+  }
+}
