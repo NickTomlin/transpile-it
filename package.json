@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "http-server",
-    "start": "npm run watch:6to5",
+    "start": "npm run watch:6to5 & npm run serve",
     "bundle:6to5": "browserify -t 6to5-browserify source.js > built.js",
     "watch:6to5": "watchify -t 6to5-browserify source.js -o built.js",
     "bundle:traceur": "browserify -t es6ify source.js > built.js",
